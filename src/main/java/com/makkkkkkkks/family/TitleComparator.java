@@ -1,10 +1,12 @@
-package java.main.com.makkkkkkkks.family;
+package main.java.com.makkkkkkkks.family;
 
 import java.util.Comparator;
+import java.util.Map;
 
-public class TitleComparator implements Comparator<Family> {
+public class TitleComparator implements Comparator<Map.Entry<Integer, Family>> {
+
     @Override
-    public int compare(Family o1, Family o2) {
-        return o2.getTitle().compareTo(o1.getTitle());
+    public int compare(Map.Entry<Integer, Family> family1, Map.Entry<Integer, Family> family2) {
+        return family1.getValue().getTitle().compareTo(family2.getValue().getTitle());
     }
 }

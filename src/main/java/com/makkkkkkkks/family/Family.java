@@ -1,4 +1,4 @@
-package java.main.com.makkkkkkkks.family;
+package main.java.com.makkkkkkkks.family;
 
 public class Family implements Comparable<Family> {
 
@@ -23,18 +23,38 @@ public class Family implements Comparable<Family> {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQuantityMember() {
+        return quantityMember;
+    }
+
+    public void setQuantityMember(int quantityMember) {
+        this.quantityMember = quantityMember;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getNameOfEmblem() {
         return nameOfEmblem;
     }
 
+    public void setNameOfEmblem(String nameOfEmblem) {
+        this.nameOfEmblem = nameOfEmblem;
+    }
+
     public String toString() {
-        return "Family: " + "name='" + name +
-                " quantityMember=" + quantityMember +
-                " title='" + title +
-                " nameOfEmblem='" + nameOfEmblem;
+        return "Family: " + "name= " + name +
+                " quantityMember= " + quantityMember +
+                " title= " + title +
+                " nameOfEmblem= " + nameOfEmblem;
     }
 }
