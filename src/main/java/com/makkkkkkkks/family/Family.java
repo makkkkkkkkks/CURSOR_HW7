@@ -1,5 +1,7 @@
 package main.java.com.makkkkkkkks.family;
 
+import java.util.Objects;
+
 public class Family implements Comparable<Family> {
 
     private String name;
@@ -49,6 +51,22 @@ public class Family implements Comparable<Family> {
 
     public void setNameOfEmblem(String nameOfEmblem) {
         this.nameOfEmblem = nameOfEmblem;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Family family = (Family) o;
+        return quantityMember == family.quantityMember &&
+                Objects.equals(name, family.name) &&
+                Objects.equals(title, family.title) &&
+                Objects.equals(nameOfEmblem, family.nameOfEmblem);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, quantityMember, title, nameOfEmblem);
     }
 
     public String toString() {
